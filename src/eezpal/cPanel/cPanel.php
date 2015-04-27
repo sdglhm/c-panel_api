@@ -3,7 +3,7 @@
 	// Author: eezpal
 	// Developer: Lahiru Himesh Madusanka
 	// URL: http://eezpal.com
-	// This api will provide basic functions that requires to use cPanel/whm api using PHP. Guzzel HTTP library required.
+	// This api will provide basic functions that requires to use cPanel/whm api using PHP. 
 
 	namespace eezpal\cPanel_api;
 
