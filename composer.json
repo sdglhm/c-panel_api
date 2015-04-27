@@ -1,8 +1,8 @@
 {
-    "name": "sdglhm/cPanel_api",
+    "name": "sdglhm/c-panel_api",
     "autoload": {
         "psr-0" : {
-            "sdglhm\\cPanel_api" : "src"
+            "sdglhm\\c-panel_api" : "src"
         }
     }
 }
