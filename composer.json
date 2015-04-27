@@ -1,32 +1,8 @@
 {
-    "name": "eezpal/cpanel-api",
-    "description": "This small cURL driven PHP class will help you to call cPanel/WHM functions at no cost (maybe limb removal required)",
-    "license": "apache",
-    "authors": [
-        {
-            "name": "eezpal",
-            "email": "dev@eezpal.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {},
-    "repositories": [
-    {
-        "type": "package",
-        "package": {
-            "name": "eezpal/cpanel-api",
-            "version": "dev-master",
-            "source": {
-                "url": "git://github.comsdglhm/cPanel_api.git",
-                "type": "git",
-                "reference": "master"
-            },
-            "autoload": {
-                "psr-0" : {
-                    "sdglhm\\cPanel_api" : "src"
-                }
-            }
+    "name": "sdglhm/cPanel_api",
+    "autoload": {
+        "psr-0" : {
+            "sdglhm\\cPanel_api" : "src"
         }
     }
-]
 }
