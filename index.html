@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>C-panel api by sdglhm</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>C-panel api</h1>
+        <p>cPanel/WHM api that uses cURL</p>
+
+        <p class="view"><a href="https://github.com/sdglhm/c-panel_api">View the Project on GitHub <small>sdglhm/c-panel_api</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/sdglhm/c-panel_api/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sdglhm/c-panel_api/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sdglhm/c-panel_api">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="cpanel_api" class="anchor" href="#cpanel_api" aria-hidden="true"><span class="octicon octicon-link"></span></a>cPanel_api</h1>
+
+<p>cPanel/WHM api that uses cURL</p>
+
+<p>This library was written by our company to implement it to a small software. But as our lord t-rex forces us to make this open, here it is.</p>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>how to use</h2>
+
+<h5>
+<a id="update-your-composerjson-file-as-follows" class="anchor" href="#update-your-composerjson-file-as-follows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update your composer.json file as follows.</h5>
+
+<pre><code>{
+    "require": {
+        "sdglhm/c-panel_api": "dev-master"
+    }
+}
+</code></pre>
+
+<p>Run composer and download package to your monster. Did I just said it out loud ?</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>vendor/autoload.php<span class="pl-pds">'</span></span>;</span></pre></div>
+
+<p>This will load library to your PHP thingy you're writing.</p>
+
+<h5>
+<a id="then-fire-at-will" class="anchor" href="#then-fire-at-will" aria-hidden="true"><span class="octicon octicon-link"></span></a>Then fire at will</h5>
+
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$cpanel</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">\eezpal\cPanel_api\</span><span class="pl-c1">cPanel</span>([</span>
+<span class="pl-s1">            <span class="pl-s"><span class="pl-pds">'</span>host<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$host</span>,</span>
+<span class="pl-s1">            <span class="pl-s"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$user</span>,</span>
+<span class="pl-s1">            <span class="pl-s"><span class="pl-pds">'</span>hash<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$hash</span></span>
+<span class="pl-s1">        ]);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$accounts</span> <span class="pl-k">=</span> <span class="pl-smi">$cpanel</span><span class="pl-k">-&gt;</span>accountsummary(</span>
+<span class="pl-s1">        [<span class="pl-s"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span><span class="pl-k">=&gt;</span><span class="pl-s"><span class="pl-pds">'</span>eezpal<span class="pl-pds">'</span></span>]</span>
+<span class="pl-s1">        ); </span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-c1">var_dump</span>(<span class="pl-smi">$accounts</span>);</span></pre></div>
+
+<p>Yes this will give you a warning message. So define all the variables at respective places.</p>
+
+<p>Made with ♥ <a href="http://eezpal.com">http://eezpal.com</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/sdglhm">sdglhm</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
