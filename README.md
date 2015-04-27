@@ -38,6 +38,6 @@ $accounts = $cpanel->accountsummary(
 var_dump($accounts);
 ```
 
-Yes this will gives you warning message. So define all the variables at respective places.
+Yes this will give you a warning message. So define all the variables at respective places.
 
 Made with ♥ http://eezpal.com
