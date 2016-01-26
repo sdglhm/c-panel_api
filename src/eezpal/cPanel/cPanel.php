@@ -1,20 +1,46 @@
 <?php 
-	// cPanel/WHM api from eezpal
-	// Author: eezpal
-	// Developer: Lahiru Himesh Madusanka
-	// URL: http://eezpal.com
-	// This api will provide basic functions that requires to use cPanel/whm api using PHP. 
 
+// Copyright (c) 2016 Lahiru Himesh
+
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+
+	 
+	/**
+	 * Better documentation added !
+	 */
 	namespace eezpal\cPanel_api;
 
+	/**
+	 * cPanel Class for handling
+	 */
 	class cPanel
 	{
-
+		
 		private $host;
 		private $username;
 		private $hash;
 		protected $headers=array();
 
+		/**
+		 * [__construct Constructing cPanel api connection]
+		 * @param array $options Passing user, host name and access hash for cPanel
+		 */
 		public function __construct($options=array()){
 			return $this->checkSettings($options)
 				->setHost($options['host'])
@@ -22,12 +48,23 @@
 			;
 		}
 
+		/**
+		 * [__call Method invoking __call will build passed arguments]
+		 * @param  [type] $method [description]
+		 * @param  [type] $arg    [description]
+		 * @return [type]         [description]
+		 */
 		public function __call($method, $arg)
 		{
 			$this->buildArg($arg['0']);
 		    return $this->cpQuery($method);
 		}
 
+		/**
+		 * Check if settings are present with the passed variables
+		 * @param  [] $options [description]
+		 * @return [type]          [description]
+		 */
 		private function checkSettings($options)
 		{
 		    if(empty($options['user']))
