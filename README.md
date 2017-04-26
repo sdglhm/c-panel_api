@@ -3,9 +3,9 @@ cPanel/WHM api that uses cURL
 
 This library was written by our company to implement it to a small software. But as our lord t-rex forces us to make this open, here it is.
 
-##how to use
+## how to use
 
-#####Update your composer.json file as follows.
+##### Update your composer.json file as follows.
 ```
 {
     "require": {
@@ -22,7 +22,7 @@ require 'vendor/autoload.php';
 
 This will load library to your PHP thingy you're writing.
 
-#####Then fire at will
+##### Then fire at will
 
 ```php
 $cpanel = new \eezpal\cPanel_api\cPanel([
